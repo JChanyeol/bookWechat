@@ -1,0 +1,48 @@
+<view class='bb-container'>
+  <view class='bb-main'>
+    <view class='bb-header'>
+      <view class='bn-list-image'>
+        <image src='../../images/bn-user-01.jpg'></image>
+      </view>
+      <view class='bn-list-main'>
+        <view class='bn-list-main-name'>艾小飞</view>
+        <view class='bn-list-mian-text'>想借</view>
+      </view>
+    </view>
+
+    <view class='bd-header-list'>
+      <view class='bd-header-list-book-img'>
+        <image src='https://img3.doubanio.com/view/subject/s/public/s28607882.jpg'></image>
+      </view>
+      <view class='bd-header-list-book-text'>
+        <view class='bd-header-list-book-text-title'>不畏过去不念将来</view>
+        <view class='bd-header-list-book-text-author'>十二</view>
+        <view class='bd-header-list-book-text-main'>
+          <view>你有看看这个世界的近况吗？有些人在食品中添加致病化学物质，只为货架上能待得更久；你有看看</view>
+          <view class='bd-header-list-book-text-main-more'>更多</view>
+        </view>
+      </view>
+    </view>
+
+    <view class='bb-section'>
+      <view class='bb-section-succ'>同意</view>
+      <view class='bb-section-fail'>拒绝</view>
+    </view>
+
+    <view class='bb-footer'>
+      <view class='bb-footer-left'>
+        <view class='bb-footer-left-image'>
+          <image src='../../images/bn-user-01.jpg'></image>
+        </view>
+        <view class='bb-footer-left-image'>
+          <image src='../../images/bn-user-01.jpg'></image>
+        </view>
+        <view>也想借这本书</view>
+      </view>
+      <view class='bb-footer-right'>
+        <image src='../../images/book-right.png'></image>
+      </view>
+    </view>
+
+  </view>
+</view>

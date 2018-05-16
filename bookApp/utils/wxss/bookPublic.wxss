@@ -1,0 +1,148 @@
+/* header编辑栏 */
+.bs-header{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60rpx;
+  background-color: #F0F0F0;
+  /* border-top: 1rpx solid #FFF; */
+}
+.bs-header-delete{
+  width: 100rpx; 
+  height: 60rpx;
+  /* margin-left: 20rpx; */
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #22AAFF;
+  /* border-right: 1rpx solid #FFF; */
+  /* background-color: #FFF; */
+}
+.bs-header-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200rpx;
+  height: 50rpx;
+  /* margin-left: 20rpx; */
+  font-size: 30rpx;
+  color: #22AAFF;
+  /* border-radius: 10rpx; */
+  /* background-color: #FFF; */
+}
+.bs-header-button image{
+  width: 36rpx;
+  height: 42rpx;
+  margin-top: 2rpx;
+  margin-left: 4rpx;
+}
+.bs-header-add{
+  width: 100rpx; 
+  height: 60rpx;
+  /* margin-right: 20rpx; */
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #22AAFF;
+  /* border-radius: 10rpx; */
+  /* border-left: 1rpx solid #FFF; */
+  /* background-color: #FFF; */
+}
+
+/* 用户头像和名称 */
+.main-sec-con-list-user{
+  display: flex;
+  align-items: center;
+  margin-left: 10rpx;
+}
+.main-sec-con-list-user-image{
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  background-color: #F0F0F0;
+}
+.main-sec-con-list-user-image image{
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+}
+.main-sec-con-list-user-text{
+  margin-left: 10rpx;
+  font-size: 24rpx;
+  color: #303030;
+}
+
+/* model提示框 */
+.book-model-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .1);
+}
+.book-model-main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 480rpx;
+  padding: 20rpx 0;
+  border-radius: 20rpx;
+  background-color: #FFF;
+}
+.book-model-title{
+  margin: 30rpx 0;
+  font-size: 36rpx;
+  color: #303030;
+}
+.book-model-text{
+  margin-top: 10rpx;
+  margin-bottom: 60rpx;
+  font-size: 30rpx;
+  color: #888;
+}
+.book-model-footer{
+  display: flex;
+  width: 100%;
+  padding: 20rpx 0;
+  border-top: 1rpx solid #E6E6E6;
+}
+.book-model-button{
+  width: 50%;
+  text-align: center;
+  margin-top: 20rpx;
+  font-size: 32rpx;
+  color: #22AAFF;
+}
+
+/* toast提示框 */
+.book-toast-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.book-toast-main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 230rpx;
+  padding: 60rpx 60rpx;
+  border-radius: 20rpx;
+  background-color: rgba(0, 0, 0, .5);
+}
+.book-toast-text{
+  font-size: 32rpx;
+  color: #FFF;
+}

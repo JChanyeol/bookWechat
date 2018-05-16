@@ -1,0 +1,148 @@
+<view class='bs-container'>
+  <view class='bs-header' hidden='{{bookHeaderHide}}'>
+    <view class='bs-header-delete' bindtap='toBookEdit'>编辑</view>
+    <view class='bs-header-button' bindtap='toBookClassify'>
+      <text>{{bcListSelect}}</text>
+      <image src='../../images/bs-down.png'></image> 
+    </view>
+    <view class='bs-header-add' bindtap='getMore'>添加</view>
+  </view>
+  <!-- 删除header---begin -->
+  <view class='bs-header bs-delete' hidden='{{deleteHeaderHide}}'>
+    <view class='bs-header-delete' bindtap='toBookshelf'>取消</view>
+    <view class='bs-header-add' bindtap='isDeleteBook'>完成</view>
+  </view>
+    <!-- 删除header---end -->
+  <view class='bs-main'>
+    <view class='bs-main-list' wx:for="{{bookShelfList}}" wx:for-item="book" data-index='{{index}}'  bindtap='selectBook'>
+      <view class='bs-main-list-image'>
+        <image src='{{book.path}}'></image>
+      </view>
+      <view class='bs-main-list-text'>{{book.title}}</view>
+      <view class='bs-main-list-borrow' wx:if="{{book.State == 1}}">借</view>
+      <view class='bs-main-list-give' wx:if="{{book.State == 0}}">出</view>
+      <!-- <view class='bs-main-list-ban' hidden='{{book.giveState}}'></view> -->
+      <view class='bs-main-list-del' hidden='{{book.delHide}}'>
+        <image src='{{book.delPath}}'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 删除提示框 -->
+<view class='book-model-container' hidden='{{modelHide}}' bindtap='deleteBookCancel'>
+  <view class='book-model-main'>
+    <view class='book-model-title'>提示</view>
+    <view class='book-model-text'>是否将所选书籍移出书架？</view>
+    <view class='book-model-footer'>
+      <view class='book-model-button' bindtap='deleteBookCancel'>取消</view>
+      <view class='book-model-button' bindtap='deleteBook'>移出</view>
+    </view>
+  </view>
+</view>
+
+<!-- 请选择提示框 -->
+<view class='book-toast-container' hidden='{{toastHide}}'>
+  <view class='book-toast-main'>
+    <view class='book-toast-text'>请选择要移出书架的书籍!</view>
+  </view>
+</view>
+<!-- 分类选择 -->
+<view class='book-classify' hidden='{{bookClassifyHide}}' animation='{{classAnimation}}'>
+<view class='bc-container'>
+  <!-- <view class='bs-header'>
+    <view class='bs-header-delete'>编辑</view>
+    <view class='bs-header-add' bindtap='getBookClassifyOver'>完成</view>
+  </view> -->
+  <view class='bc-section'>
+    <view class="bc-sec-list {{bc.banShow==true ? 'bc-sec-list-text-active' : ''}}" wx:for="{{bcList}}" wx:for-item="bc" data-index='{{index}}' bindtap='getBookClassify'>
+      <view class='bc-sec-list-text'>{{bc.text}}</view>
+      <view class='bc-sec-list-icon' hidden='{{bc.imgHide}}'><image src='{{bc.path}}'></image></view>
+    </view>
+    <view class='bc-sec-list-add' bindtap='addBookShow'>
+      <view class='bc-sec-list-text'>新建分类</view>
+      <view class='bc-sec-list-icon'><image src='../../images/bc-add.png'></image></view>
+    </view>
+    <view class='bc-sec-list-edit' hidden='{{addBookHide}}'>
+      <view class='bc-sec-list-edit-input'>
+        <input placeholder='请输入分类名称' focus='{{focus}}' placeholder-style='color: #888' bindinput='getBookClassifyValue' value='{{addBookClassifyValue}}'></input>
+      </view>
+      <view class='bc-sec-list-edit-button' bindtap='addBookClassify'>完成</view>
+    </view>
+  </view>
+</view>
+</view>
+
+<!-- 扫描成功后提示框  -->
+<view class='bc-scancode' hidden='{{scancodeModelHide}}'>
+<view class='bsc-container'>
+  <view class='bsc-header'>
+    <view class='bd-header-list'>
+      <view class='bd-header-list-book-img'>
+        <image src='{{bookShelf.path}}'></image>
+      </view>
+      <view class='bd-header-list-book-text'>
+        <view class='bd-header-list-book-text-title'>{{bookShelf.title}}</view>
+        <view class='bd-header-list-book-text-author'>{{bookShelf.author}}</view> 
+        <view class='bd-header-list-book-text-main'>
+          <view>{{bookShelf.summary}}</view>
+          <view class='bd-header-list-book-text-main-more'>更多</view>
+        </view>
+      </view>
+    </view>   
+  </view>
+
+  <view class='bsc-section'>
+    <view class='bsc-sec-title' bindtap='toBorrowBookCondition'>
+      <text>借阅条件</text>
+      <view><image src='../../images/book-right-white.png'></image></view>
+    </view>
+    <view class='bsc-sec-list'>押金: {{depositValue}}</view>
+    <view class='bsc-sec-list'>租金: {{rentValue}}元/{{scaleValue}}</view>
+    <view class='bsc-sec-list'>期限: {{maxDateValue}}{{dateValue}}</view>
+  </view>  
+
+  <view class='bsc-footer'>
+    <view class='bsc-button-succ' bindtap='addBookToShelf'>确定上架</view>
+    <view class='bsc-button-fail' bindtap='scancodeModelCancel'>取消</view>
+  </view>
+</view>
+</view>
+
+<!-- 借阅条件弹框 -->
+<view class='bbc-container' hidden='{{borrowBookConditionHide}}' animation='{{conditionAnimation}}'>
+  <view class='bs-header'>
+    <view class='bs-header-delete' bindtap='backMyBookDetail'>取消</view>
+    <view class='bs-header-add' bindtap='setComplate'>确定</view>
+  </view> 
+  <view class='bbc-section'>
+    <view class='bbc-sec-list'>
+      <view class='bbc-sec-list-main'>
+        <text class='bbc-sec-list-main-text'>押金:</text>
+        <input type='digit' bindinput='depositValue'></input>
+        <text class='bbc-sec-list-main-text'>(元)</text>
+      </view>
+    </view>
+    <view class='bbc-sec-list'>
+      <view class='bbc-sec-list-main-spc'>
+        <text class='bbc-sec-list-main-text'>租金:</text>
+        <input type='digit' bindinput='rentValue'></input>
+        <text class='bbc-sec-list-main-text'>(元)</text>
+        <picker bindchange="scalePickerChange" value="{{scaleIndex}}" range="{{scaleList}}">
+          <view class="picker">{{scaleList[scaleIndex]}}</view>
+          <image src='../../images/book-right.png'></image>
+        </picker>
+      </view>
+    </view>
+    <view class='bbc-sec-list'>
+      <view class='bbc-sec-list-main-last'>
+        <text class='bbc-sec-list-main-last-text'>最长期限:</text>
+        <input type='number' bindinput='maxDateValue'></input>
+        <picker bindchange="datePickerChange" value="{{dateIndex}}" range="{{dateList}}">
+          <view class="picker">{{dateList[dateIndex]}}</view>
+          <image src='../../images/book-right.png'></image>
+        </picker>
+      </view>
+    </view>
+  </view>
+</view>

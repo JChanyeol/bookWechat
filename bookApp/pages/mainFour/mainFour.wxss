@@ -1,0 +1,221 @@
+page{
+  width: 100%;
+  background-color: #F0F0F0;
+}
+.main-search-ban{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 200rpx;
+  padding-top: 30rpx;
+  background-color: #22AAFF;
+}
+.main-search{
+  display: flex;
+  width: 650rpx;
+  height: 60rpx;
+  border-radius: 10rpx;
+  background-color: #4EBBFF;
+}
+.main-search-icon{
+  width: 48rpx;
+  height: 48rpx;
+  padding: 6rpx 20rpx;
+}
+.main-search-icon image{
+  width: 48rpx;
+  height: 48rpx;
+}
+.main-search-input{
+  width: 620rpx;
+  height: 60rpx;
+}
+.main-search-input input{
+  width: 620rpx;
+  height: 60rpx;
+  min-height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #FFF;
+  outline: none;
+  border: none;
+}
+.main-input-placeholder{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #FFF;
+}
+.main-container{
+  position: relative;
+  top: 80rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* 推荐 */
+.main-header{
+  width: 650rpx;
+  margin-top: 60rpx;
+  border-radius: 20rpx;
+  background-color: #FFF;
+}
+.main-header-title{
+  /* width: calc(100% - 20rpx); */
+  width: 100%;
+  text-align: center;
+  padding-top: 30rpx;
+  padding-bottom: 10rpx;
+  /* padding-left: 20rpx; */
+  font-size: 36rpx;
+  color: #303030;
+}
+.main-header-section{
+  display: flex;
+  justify-content: center;
+  padding: 20rpx 0rpx;
+}
+.main-header-section-list{
+  margin: 0rpx 10rpx;
+}
+.main-header-section-list-image image{
+  width: 180rpx;
+  height: 230rpx;
+}
+.main-header-section-list-text{
+  width: 180rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #303030;
+}
+.main-header-footer{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 20rpx;
+  padding-bottom: 50rpx;
+}
+.main-header-button{
+  width: 460rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  color: #FFF;
+  border-radius: 50rpx;
+  background-color: #30A5FF;
+}
+/* 动态 */
+.main-section{
+  width: 650rpx;
+  margin-top: 50rpx;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  /* background-color: #FFF; */
+}
+.main-sec-title{
+  width: 100%; 
+  text-align: center; 
+  margin-top: 0rpx;
+  margin-bottom: 10rpx;
+  font-size: 36rpx;
+  color: #303030;
+}
+.main-sec-con{
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  width: 100%;
+  padding: 10rpx 0rpx;
+}
+.main-sec-con-list{
+  width: 650rpx;
+  margin: 10rpx 10rpx;
+  border-radius: 10rpx; 
+  background-color: #FFF;
+}
+.main-sec-con-list .main-sec-con-list-view:first-of-type{
+  border-bottom: 1rpx solid #e6e6e6;
+}
+.main-sec-con-list-view{
+  display: flex;
+  padding: 10rpx 10rpx;
+  padding-bottom: 0;
+}
+.main-sec-con-list-image image{
+  width: 150rpx;
+  height: 192rpx;
+  /* border-top-left-radius: 10rpx;  */
+}
+.main-sec-con-list-main{
+  position: relative;
+  width: 470rpx;
+  height: 192rpx;
+}
+.main-sec-con-list-main-title{
+  padding: 0rpx 10rpx;
+  padding-top: 10rpx;
+  font-size: 28rpx;
+  color: #303030;
+}
+.main-sec-con-list-main-text{
+  padding: 0rpx 10rpx;
+  padding-top: 10rpx;
+  font-size: 26rpx;
+  color: #888;
+}
+.main-sec-con-list-two{
+  position: absolute;
+  bottom: 0rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70rpx;
+  border-radius: 10rpx;
+  background-color: #F0F0F0;
+}
+.main-sec-con-list-user{
+  display: flex;
+  align-items: center;
+  margin-left: 10rpx;
+}
+.main-sec-con-list-user-image{
+  width: 58rpx;
+  height: 58rpx;
+  border-radius: 50%;
+  background-color: #FFF;
+}
+.main-sec-con-list-user-image image{
+  width: 58rpx;
+  height: 58rpx;
+  border-radius: 50%;
+}
+.main-sec-con-list-user-text{
+  margin-left: 10rpx;
+  font-size: 24rpx;
+  color: #303030;
+}
+.main-sec-con-list-add{
+  display: flex;
+  align-items: center;
+  margin-right: 20rpx;
+}
+.main-sec-con-list-add-image image{
+  width: 36rpx;
+  height: 36rpx;
+  margin-top: 5rpx;
+}
+.main-sec-con-list-add-text{
+  margin-left: 8rpx;
+  font-size: 24rpx;
+  color: #888;
+}

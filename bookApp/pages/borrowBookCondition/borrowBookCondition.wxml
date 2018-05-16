@@ -1,0 +1,36 @@
+<view class='bbc-container'>
+  <view class='bs-header'>
+    <view class='bs-header-delete' bindtap='backMyBookDetail'>取消</view>
+    <view class='bs-header-add' bindtap='setComplate'>确定</view>
+  </view>
+  <view class='bbc-section'>
+    <view class='bbc-sec-list'>
+      <view class='bbc-sec-list-main'>
+        <text class='bbc-sec-list-main-text'>押金:</text>
+        <input type='digit' bindinput='depositValue'></input>
+        <text class='bbc-sec-list-main-text'>(元)</text>
+      </view>
+    </view>
+    <view class='bbc-sec-list'>
+      <view class='bbc-sec-list-main-spc'>
+        <text class='bbc-sec-list-main-text'>租金:</text>
+        <input type='digit' bindinput='rentValue'></input>
+        <text class='bbc-sec-list-main-text'>(元)</text>
+        <picker bindchange="scalePickerChange" value="{{scaleIndex}}" range="{{scaleList}}">
+          <view class="picker">{{scaleList[scaleIndex]}}</view>
+          <image src='../../images/book-right.png'></image>
+        </picker>
+      </view>
+    </view>
+    <view class='bbc-sec-list'>
+      <view class='bbc-sec-list-main-last'>
+        <text class='bbc-sec-list-main-last-text'>最长期限:</text>
+        <input type='number' bindinput='maxDateValue'></input>
+        <picker bindchange="datePickerChange" value="{{dateIndex}}" range="{{dateList}}">
+          <view class="picker">{{dateList[dateIndex]}}</view>
+          <image src='../../images/book-right.png'></image>
+        </picker>
+      </view>
+    </view>
+  </view>
+</view>

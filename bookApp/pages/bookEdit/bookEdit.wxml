@@ -1,0 +1,36 @@
+<view class='bs-container'> 
+  <view class='bs-header'>
+    <view class='bs-header-delete' bindtap='isDeleteBook'>删除</view>
+    <view class='bs-header-add' bindtap='toBookshelf'>完成</view>
+  </view>
+  <view class='bs-main'>
+    <view class='bs-main-list' wx:for="{{bookShelfList}}" wx:for-item="book" data-index='{{index}}' bindtap='selectBook'>
+      <view class='bs-main-list-image'>
+        <image src='{{book.path}}'></image>
+      </view>
+      <view class='bs-main-list-text'>{{book.title}}</view>
+      <view class='bs-main-list-del'>
+        <image src='{{book.delPath}}'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 删除提示框 -->
+<view class='book-model-container' hidden='{{modelHide}}' bindtap='deleteBookCancel'>
+  <view class='book-model-main'>
+    <view class='book-model-title'>提示</view>
+    <view class='book-model-text'>是否将所选书籍移出书架？</view>
+    <view class='book-model-footer'>
+      <view class='book-model-button' bindtap='deleteBookCancel'>取消</view>
+      <view class='book-model-button' bindtap='deleteBook'>移出</view>
+    </view>
+  </view>
+</view>
+
+<!-- 请选择提示框 -->
+<view class='book-toast-container' hidden='{{toastHide}}'>
+  <view class='book-toast-main'>
+    <view class='book-toast-text'>请选择要移出书架的书籍!</view>
+  </view>
+</view>

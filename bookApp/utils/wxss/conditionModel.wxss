@@ -1,0 +1,92 @@
+@import "bookPublic.wxss";
+.bbc-container{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F0F0F0;
+}
+.bbc-section{
+  width: 100%;
+}
+.bbc-sec-list{
+  width: 100%;
+  background-color: #FFF;
+  margin-bottom: 20rpx;
+}
+.bbc-sec-list-title{
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-left: 20rpx;
+  font-size: 28rpx;
+  color: #FFF;
+  background-color: #22AAFF;
+  border-bottom: 1rpx solid #E6E6E6;
+}
+.bbc-sec-list-main,.bbc-sec-list-main-spc,.bbc-sec-list-main-last{
+  display: flex;
+  width: calc(100% - 40rpx);
+  height: 80rpx;
+  padding: 0 20rpx;
+  border-bottom: 1rpx solid #E6E6E6;
+}
+.bbc-sec-list-main input{
+  width: calc(100% - 200rpx);
+  height: 80rpx;
+  text-align: right;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  color: #303030;
+}
+.bbc-sec-list-main-spc input{
+  width: calc(100% - 336rpx);
+  height: 80rpx;
+  text-align: right;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  color: #303030;
+}
+.bbc-sec-list-main-last input{
+  width: calc(100% - 276rpx);
+  height: 80rpx;
+  text-align: right;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  color: #303030;
+}
+.bbc-sec-list-main-text{
+  width: 100rpx;
+  text-align: right;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #888;
+}
+.bbc-sec-list-main-last-text{
+  width: 140rpx;
+  text-align: left;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #888;
+}
+.bbc-sec-list-main-text:first-of-type{
+  width: 100rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #888;
+  text-align: left;
+}
+.picker{
+  float: left;
+  width: 96rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #888;
+  text-align: right;
+}
+.bbc-sec-list-main-spc image,.bbc-sec-list-main-last image{
+  float: right;
+  width: 36rpx;
+  height: 36rpx;
+  margin-top: 22rpx;
+  margin-left: 4rpx;
+}

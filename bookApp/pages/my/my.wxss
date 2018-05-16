@@ -1,0 +1,60 @@
+page{
+  background-color: #FFF;
+}
+.my-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #FFF;
+}
+.my-header-user{
+  width: 180rpx;
+  height: 180rpx;
+  padding: 30rpx 0rpx;
+  border-radius: 50%;
+}
+.my-header-user image{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+}
+.my-header-text{
+  font-size: 32rpx;
+  color: #888;
+}
+.my-header-user-follow{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 680rpx;
+  height: 100rpx;
+  border-top: 1rpx solid #E6E6E6;
+}
+.my-header-user-follow-list{
+  margin: 0 40rpx;
+  text-align: center;
+}
+.my-header-user-follow-list>view:nth-of-type(1){
+  font-size: 32rpx;
+  color: #22AAFF;
+}
+.my-header-user-follow-list>view:nth-of-type(2){
+  font-size: 26rpx;
+  color: #888;
+}
+.my-header-user-pay{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 680rpx;
+  height: 100rpx;
+  font-size: 30rpx;
+  color: #303030;
+  border-top: 1rpx solid #E6E6E6;
+  border-bottom: 1rpx solid #E6E6E6;
+}
+.my-header-user-pay view{
+  margin: 0 40rpx;
+}

@@ -1,0 +1,32 @@
+<view class='bsc-container'>
+  <view class='bsc-header'>
+    <view class='bd-header-list'>
+      <view class='bd-header-list-book-img'>
+        <image src='https://img3.doubanio.com/view/subject/s/public/s28607882.jpg'></image>
+      </view>
+      <view class='bd-header-list-book-text'>
+        <view class='bd-header-list-book-text-title'>不畏过去不念将来</view>
+        <view class='bd-header-list-book-text-author'>十二</view>
+        <view class='bd-header-list-book-text-main'>
+          <view>你有看看这个世界的近况吗？有些人在食品中添加致病化学物质，只为货架上能待得更久；你有看看</view>
+          <view class='bd-header-list-book-text-main-more'>更多</view>
+        </view>
+      </view>
+    </view>   
+  </view>
+
+  <view class='bsc-section'>
+    <view class='bsc-sec-title' bindtap='toBorrowBookCondition'>
+      <text>借阅条件</text>
+      <view><image src='../../images/book-right-white.png'></image></view>
+    </view>
+    <view class='bsc-sec-list'>押金: 20</view>
+    <view class='bsc-sec-list'>租金: 2元/周</view>
+    <view class='bsc-sec-list'>期限: 1月</view>
+  </view>  
+
+  <view class='bsc-footer'>
+    <view class='bsc-button-succ'>确定上架</view>
+    <view class='bsc-button-fail'>取消</view>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+<view class='my-container'>
+  <view class='my-header'>
+    <view class='my-header-user'><image src='{{userImg}}'></image></view>
+    <!-- <view class='my-header-text'>编辑个人资料</view> -->
+    <view class='my-header-user-follow'>
+      <view class='my-header-user-follow-list'>
+        <view>192</view>
+        <view>关注</view>
+      </view>
+      <view class='my-header-user-follow-list'>
+        <view>92</view>
+        <view>粉丝</view>
+      </view>
+      <view class='my-header-user-follow-list'>
+        <view>6</view>
+        <view>收藏</view>
+      </view>
+    </view>
+    <view class='my-header-user-pay'>
+      <view>我的借阅记录</view>
+    </view>
+    
+  </view>
+</view>
+
+<!-- <open-data type="groupName" open-gid="xxxxxx"></open-data> -->
+<open-data type="userAvatarUrl"></open-data>
+<open-data type="userNickName"></open-data>

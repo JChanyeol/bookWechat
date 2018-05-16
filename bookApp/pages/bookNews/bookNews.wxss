@@ -1,0 +1,34 @@
+.bn-list{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 120rpx;
+  border-top: 1rpx solid #E6E6E6;
+}
+.bn-list-image{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 20rpx;
+  border: 1rpx solid #E6E6E6;
+}
+.bn-list-main {
+  margin-left: 10rpx;
+}
+.bn-list-image image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.bn-list-main-name{
+  margin-bottom: 10rpx;
+  font-size: 32rpx;
+  color: #303030;
+}
+.bn-list-mian-text{
+  display: flex;
+  font-size: 28rpx;
+  color: #888;
+}
+.bn-list-mian-title{
+  margin-left: 14rpx;
+  color: #22AAFF;
+}

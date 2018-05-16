@@ -1,0 +1,15 @@
+<view class='bn-container'> 
+  <view class='bn-list' bindtap='toBorrowBookDetail'>
+    <view class='bn-list-image'>
+      <image src='../../images/bn-user-01.jpg'></image>
+    </view>
+    <view class='bn-list-main'>
+      <view class='bn-list-main-name'>艾小飞</view>
+      <view class='bn-list-mian-text'>
+        <text>想借阅</text>
+        <text class='bn-list-mian-title'>走过你的时间</text>
+      </view>
+    </view>
+  </view>
+  <view class='bn-list'></view>
+</view>

@@ -1,0 +1,22 @@
+<view class='bc-container'>
+  <view class='bs-header'>
+    <view class='bs-header-delete'>编辑</view>
+    <view class='bs-header-add' bindtap='getBookClassifyOver'>完成</view>
+  </view>
+  <view class='bc-section'>
+    <view class="bc-sec-list {{bc.banShow==true ? 'bc-sec-list-text-active' : ''}}" wx:for="{{bcList}}" wx:for-item="bc" data-index='{{index}}' bindtap='getBookClassify'>
+      <view class='bc-sec-list-text'>{{bc.text}}</view>
+      <view class='bc-sec-list-icon' hidden='{{bc.imgHide}}'><image src='{{bc.path}}'></image></view>
+    </view>
+    <view class='bc-sec-list-add' bindtap='addBookShow'>
+      <view class='bc-sec-list-text'>新建分类</view>
+      <view class='bc-sec-list-icon'><image src='../../images/bc-add.png'></image></view>
+    </view>
+    <view class='bc-sec-list-edit' hidden='{{addBookHide}}'>
+      <view class='bc-sec-list-edit-input'>
+        <input placeholder='请输入分类名称' focus='{{focus}}' placeholder-style='color: #888' bindinput='getBookClassifyValue' value='{{addBookClassifyValue}}'></input>
+      </view>
+      <view class='bc-sec-list-edit-button' bindtap='addBookClassify'>完成</view>
+    </view>
+  </view>
+</view>
